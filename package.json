@@ -1,0 +1,24 @@
+{
+  "name": "Hackbox",
+  "version": "1.0.0",
+  "main": "dist/Hackbox.js",
+  "repository": "https://github.com/HackboxGames/Hackbox.git",
+  "author": "Isaac Robbins <isaacprobbins@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "start": "cross-env CABOOSE_SERVER_ENV=production node dist/CabooseServer.js",
+    "dev": "cross-env CABOOSE_SERVER_ENV=development ts-node src/CabooseServer.ts",
+    "build": "yarn build:cleanDist && yarn build:generateJavascript && yarn copy-files-from-to",
+    "build:cleanDist": "node_modules/.bin/rimraf dist",
+    "build:generateJavascript": "tsc -p ."
+  },
+  "copyFiles": [
+
+  ],
+  "dependencies": {
+    "cross-env": "^7.0.3"
+  },
+  "devDependencies": {
+    "typescript": "^5.5.4"
+  }
+}
