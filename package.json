@@ -1,24 +1,29 @@
 {
-  "name": "Hackbox",
+  "name": "hackbox",
   "version": "1.0.0",
   "main": "dist/Hackbox.js",
   "repository": "https://github.com/HackboxGames/Hackbox.git",
   "author": "Isaac Robbins <isaacprobbins@gmail.com>",
   "license": "MIT",
   "scripts": {
-    "start": "cross-env CABOOSE_SERVER_ENV=production node dist/CabooseServer.js",
-    "dev": "cross-env CABOOSE_SERVER_ENV=development ts-node src/CabooseServer.ts",
-    "build": "yarn build:cleanDist && yarn build:generateJavascript && yarn copy-files-from-to",
-    "build:cleanDist": "node_modules/.bin/rimraf dist",
-    "build:generateJavascript": "tsc -p ."
+    "start": "next start -p 2014",
+    "dev": "next dev -p 2014",
+    "build": "next build"
   },
-  "copyFiles": [
-
-  ],
   "dependencies": {
-    "cross-env": "^7.0.3"
+    "@nextui-org/react": "^2.4.6",
+    "framer-motion": "^11.3.24",
+    "next": "^14.2.5",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1"
   },
   "devDependencies": {
+    "@tauri-apps/cli": "^2.0.0-rc.3",
+    "@types/node": "22.2.0",
+    "@types/react": "18.3.3",
+    "autoprefixer": "^10.4.20",
+    "postcss": "^8.4.41",
+    "tailwindcss": "^3.4.9",
     "typescript": "^5.5.4"
   }
 }
