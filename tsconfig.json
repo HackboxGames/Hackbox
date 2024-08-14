@@ -8,26 +8,6 @@
     "esModuleInterop": true,
     "moduleResolution": "node",
     "baseUrl": ".",
-    "paths": {
-      "@logger": [
-        "src/util/logger"
-      ],
-      "@environment": [
-        "src/util/environment"
-      ],
-      "@hackbox": [
-        "src/Hackbox"
-      ],
-      "@hackbox/manager": [
-        "src/managers/Manager"
-      ],
-      "@hackbox/managers": [
-        "src/managers"
-      ],
-      "@hackbox/managers/*": [
-        "src/managers/*"
-      ]
-    },
     "types": [
       "node"
     ],
@@ -54,6 +34,7 @@
     ".next/types/**/*.ts"
   ],
   "exclude": [
-    "node_modules"
+    "node_modules",
+    "src-tauri"
   ]
 }

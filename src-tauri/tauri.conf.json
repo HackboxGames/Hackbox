@@ -1,9 +1,9 @@
 {
   "productName": "Hackbox",
-  "version": "0.1.0",
-  "identifier": "com.tauri.dev",
+  "version": "../package.json",
+  "identifier": "com.hackbox.games",
   "build": {
-    "frontendDist": "src/app",
+    "frontendDist": "../out",
     "devUrl": "http://localhost:2014",
     "beforeDevCommand": "yarn dev",
     "beforeBuildCommand": "yarn build"
